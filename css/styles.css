@@ -199,14 +199,14 @@ ul > li{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
+    padding: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
     cursor: pointer;
     color: var(--L-Grey);
     background-color: var(--CORNFLOW);
-    border: 1px solid var(--CORNFLOW);
+    border: 1px solid var(--Light-Slate);
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
                 0 1px 3px 0 rgba(0, 0, 0, 0.12),
                 0 1px 1px 0 rgba(0, 0, 0, 0.14);
@@ -237,26 +237,30 @@ ul > li{
     pointer-events: none;
     opacity: 0;
 }
+  /*--------------- Modal Form Content -----------*/
 .modal-form{
     margin: 0;
+    width: 408;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
 }
 input[type="text"]{
-    width: 400px;
-    height: 35px;
+    margin-top: 4px;
+    width: 390px;
+    height: 40px;
     border-radius: 5px;
     background-color: var(--primary-white);
     border: 1px solid rgba(46, 47, 66, 0.40);   
 }
 .send-btn{
+    margin-top: 24px;
     background-color: var(--primary-color);
     padding: 16px 32px;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    width: 105px;
+    width: 169px;
     color: var(--primary-white);
     font-size: 16px;
     font-weight: 500;
@@ -268,13 +272,50 @@ input[type="text"]{
 .send-btn:hover{
     background-color: var(--hover-background);
 }
-.privacy-policy{
-    display: flex;
+.check-box {
+    color: var(--Light-Slate);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 0.8;
+    letter-spacing: 1.5px;
 }
-input[class="comment"]{
-    line-height: 2em;
-    height: 120px;
+.check-box a{
+    text-decoration: underline;
 }
+/* h3 @ html */
+.modal-title{
+    color: var(--background-font);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5px;
+    letter-spacing: 0.32px;
+}
+label, textarea{
+    color: var(--Light-Slate);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 0.8;
+    letter-spacing: 0.48px;
+}
+.svg-modal{
+    fill: var(--background-font);
+    position: absolute;
+    transform: translateY(50%);
+    padding: 2px 16px;
+    
+
+}
+.comment-box{
+    margin: 4px;
+    width: 360px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    background-color: var(--primary-white);
+    border: 1px solid rgba(46, 47, 66, 0.40)
+}
+
 
 /* ------------------------- Section1 ------------------------ */
 /* .hero-advantages */
