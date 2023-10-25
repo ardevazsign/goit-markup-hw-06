@@ -254,6 +254,7 @@ ul > li{
     gap: 8px;
 }
  .form-icon .svg-modal {
+    border: none;
     fill: var(--background-font);
     position: absolute;
     left: 0px;
@@ -281,17 +282,21 @@ input[type="text"]{
     transition: color, border-color, background-color;
     transition-timing-function:  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.svg-modal:hover,
-.svg-modal:focus{
-    border-color: var(--hover-background);
-    fill: blue;
-    color: blue;
+.form-icon .svg-modal:hover{
+    fill: var(--primary-color);
 }
-input[type="text"]:hover,
-input[type="text"]:focus + .svg-modal > use{
-    border-color: 1px solid var(--hover-background);
-    fill: blue;
+input[type="text"]:hover{
+    border-color: var(--primary-color);
+    outline: 1px solid var(--hover-background);
 }
+input[type="text"]:focus + .form-icon .svg-modal{
+    border-color: var(--primary-color);
+    fill: var(--primary-color);
+} 
+input[type="text"]:focus {
+    border-color: var(--primary-color);
+    outline: 1px solid var(--hover-background);
+} 
 .form{
     position: relative;
 }
@@ -319,6 +324,12 @@ label{
 .comment-area:focus,
 .comment-area:hover{
     border-color: var(--hover-background);
+    outline: 1px solid var(--hover-background);
+}
+input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
 }
 .check-box {
     color: var(--Light-Slate);
@@ -565,7 +576,7 @@ h3 {
      fill: var(--primary-white);
      padding: 8px;
  }
- /* subscribe form button */
+ /* subscribe  button */
  .subscribe-form{
    display: flex;
    gap: 24px;
@@ -573,7 +584,7 @@ h3 {
  input[placeholder="E-mail"]{
     text-indent: 2px;
     background-color: var(--L-Grey);
-    color: #fff;
+    color: var(--primary-white);
     width: 264px;
     border-radius: 5px;
     padding: 8px 16px;
@@ -584,6 +595,13 @@ h3 {
     border: 1px solid var(--primary-white);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
  }
+ input[placeholder="E-mail"]:focus,
+ input[placeholder="E-mail"]:hover{
+    border-color: var(--hover-background);
+    outline: 1px solid var(--primary-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+ }
+
  input::placeholder{
     color: var(--Dairy);
  }
@@ -604,13 +622,17 @@ h3 {
     display: flex; 
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+ }
+ .subscribe-btn:hover{
+    background-color: var(--hover-background);
  }
  .subscribe-btn svg{
-
     align-items: center;
     justify-content: center;
  }
-
+/* -------------------End of Index.html--------------- */
 
 /* ------------------ portfolio.html ------------------*/
 .button-portfolio {
@@ -647,7 +669,7 @@ h3 {
 
 
  .row li{
-    border: 1px solid #E7E9FC;
+    border: 1px solid var(--CORNFLOW);
     background-color: var(--primary-white);
     display: flex;
     flex-direction: column;
